@@ -111,6 +111,7 @@ ExecStart=/usr/local/bin/kube-apiserver \\
   --service-node-port-range 30000-32767 \\
   --tls-cert-file /var/lib/kubernetes/kubernetes.pem \\
   --tls-private-key-file /var/lib/kubernetes/kubernetes-key.pem \\
+  --kubelet-preferred-address-types InternalIP,ExternalIP,Hostname \\
   --v 2
 Restart=on-failure
 RestartSec=5
